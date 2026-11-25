@@ -4,93 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My HTML Assignments</title>
+    <title>HTML Practical Assignments</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
             color: #333;
         }
 
         header {
-            background-color: #23436b;
+            background-color: #243b5a;
             color: white;
-            text-align: center;
-            padding: 20px;
+            padding: 22px 8%;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 23px;
         }
 
         nav {
-            background-color: #dce5ef;
-            text-align: center;
-            padding: 12px;
+            margin-top: 15px;
         }
 
         nav a {
-            color: #23436b;
+            color: #e1e8f0;
             text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
+            margin-right: 22px;
+            font-size: 14px;
         }
 
         nav a:hover {
+            color: white;
             text-decoration: underline;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 65px 20px 45px;
+            background-color: #e9eff7;
+        }
+
+        .intro h1 {
+            color: #243b5a;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #606b78;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
         .container {
             width: 85%;
-            margin: 30px auto;
+            max-width: 1000px;
+            margin: 45px auto;
         }
 
-        h2 {
-            color: #23436b;
+        .section-title {
+            color: #243b5a;
+            font-size: 23px;
+            margin-bottom: 8px;
         }
 
-        .assignment {
+        .subtitle {
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .assignments {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
             background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 25px;
+            border: 1px solid #e1e5eb;
+            border-radius: 8px;
         }
 
-        .assignment h3 {
-            color: #23436b;
+        .number {
+            color: #5378a5;
+            font-size: 13px;
+            font-weight: bold;
         }
 
-        .assignment p {
-            line-height: 1.6;
+        .card h3 {
+            color: #243b5a;
+            margin-top: 15px;
+            font-size: 20px;
         }
 
-        .assignment a {
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            min-height: 70px;
+        }
+
+        .card a {
             display: inline-block;
-            background-color: #23436b;
+            background-color: #31577f;
             color: white;
             text-decoration: none;
-            padding: 9px 15px;
-            border-radius: 4px;
+            padding: 10px 17px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 8px;
         }
 
-        .assignment a:hover {
-            background-color: #365f8d;
+        .card a:hover {
+            background-color: #243b5a;
+        }
+
+        .about {
+            background-color: white;
+            border: 1px solid #e1e5eb;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .about h3 {
+            color: #243b5a;
+            margin-top: 0;
+        }
+
+        .about p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
         }
 
         footer {
-            background-color: #23436b;
-            color: white;
+            background-color: #243b5a;
+            color: #e1e8f0;
             text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+            padding: 18px;
+            font-size: 13px;
+            margin-top: 55px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
+            header {
+                padding: 20px;
+            }
+
+            .intro h1 {
+                font-size: 27px;
+            }
+
             .container {
                 width: 90%;
             }
 
-            nav a {
-                margin: 7px;
+            .assignments {
+                grid-template-columns: 1fr;
+            }
+
+            .card p {
+                min-height: auto;
             }
         }
     </style>
@@ -99,58 +184,82 @@
 <body>
 
     <header>
-        <h1>My HTML Assignments</h1>
-        <p>Practical Work on HTML and CSS</p>
+        <h2>HTML Practical Work</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#about">About</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#assignments">Assignments</a>
-        <a href="#about">About</a>
-    </nav>
+    <section class="intro">
+        <h1>Welcome to My Assignment Page</h1>
+
+        <p>
+            A collection of my practical work using
+            HTML and CSS.<br>
+            Explore the assignments below.
+        </p>
+    </section>
 
     <div class="container">
 
-        <h2 id="assignments">My Assignments</h2>
+        <h2 class="section-title" id="assignments">
+            My Assignments
+        </h2>
 
-        <div class="assignment">
-            <h3>Assignment 1: Student Marksheet</h3>
+        <p class="subtitle">
+            Two practical tasks completed as part of my learning.
+        </p>
 
-            <p>
-                This assignment contains a student marksheet
-                created using HTML table elements. It displays
-                subjects, marks and student results.
-            </p>
+        <div class="assignments">
 
-            <a href="task1.html">View Assignment</a>
+            <div class="card">
+                <span class="number">ASSIGNMENT 01</span>
+
+                <h3>Student Marksheet</h3>
+
+                <p>
+                    A student marksheet designed using
+                    HTML tables to display subjects,
+                    marks and academic results.
+                </p>
+
+                <a href="task1.html">View Assignment &rarr;</a>
+            </div>
+
+            <div class="card">
+                <span class="number">ASSIGNMENT 02</span>
+
+                <h3>Computer Lab Timetable</h3>
+
+                <p>
+                    A weekly computer lab timetable
+                    created using HTML table rows,
+                    columns and headings.
+                </p>
+
+                <a href="task2.html">View Assignment &rarr;</a>
+            </div>
+
         </div>
 
-        <div class="assignment">
-            <h3>Assignment 2: Computer Lab Timetable</h3>
-
-            <p>
-                This assignment shows a weekly computer lab
-                timetable using HTML tables, rows and columns.
-            </p>
-
-            <a href="task2.html">View Assignment</a>
-        </div>
-
-        <div class="assignment" id="about">
+        <div class="about" id="about">
             <h3>About This Project</h3>
 
             <p>
-                This project is part of my practical work
-                while learning HTML and CSS. Through these
-                assignments, I have learned how to create
-                tables and design simple web pages.
+                This project is based on my practical
+                learning of HTML and CSS. It includes
+                two assignments that demonstrate the
+                use of tables and basic web page design.
             </p>
         </div>
 
     </div>
 
     <footer>
-        <p>Created by Reeyaz | HTML Practical Assignment</p>
+        <p>HTML Practical Assignment | Created by Reeyaz</p>
     </footer>
 
 </body>
