@@ -1,19 +1,323 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HTML Table Assignment</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Assignment | Student Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #252c40;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #818cf8;
+        }
+
+        nav a {
+            color: #b8c0d4;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #818cf8;
+        }
+
+        .hero {
+            padding: 90px 8% 65px;
+            text-align: center;
+            background: radial-gradient(
+                circle at top,
+                #252b57 0%,
+                #0b1020 65%
+            );
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #454c83;
+            border-radius: 30px;
+            color: #a5b4fc;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #818cf8;
+        }
+
+        .hero p {
+            color: #aab2c5;
+            max-width: 580px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 55px 0 80px;
+        }
+
+        .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #929bb1;
+            font-size: 14px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #151c30;
+            border: 1px solid #29334d;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #818cf8;
+            box-shadow: 0 12px 35px rgba(79, 70, 229, 0.15);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            background: #282f57;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 24px;
+        }
+
+        .card small {
+            color: #929bb1;
+            letter-spacing: 1px;
+            font-size: 11px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin: 12px 0;
+        }
+
+        .card p {
+            color: #aab2c5;
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #6366f1;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            background: #818cf8;
+        }
+
+        .about {
+            margin-top: 65px;
+            padding: 30px;
+            border: 1px solid #29334d;
+            border-radius: 15px;
+            background: #151c30;
+        }
+
+        .about h2 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #aab2c5;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #252c40;
+            color: #929bb1;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px 6%;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 9px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 65px 6% 50px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .container {
+                width: 88%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>HTML Table Assignment</h1>
+    <header>
+        <div class="logo">Student<span>Portal.</span></div>
 
-    <h2>Task 1 - Student Marksheet</h2>
-    <a href="task1.html">View Student Marksheet</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
 
-    <h2>Task 2 - Computer Lab Timetable</h2>
-    <a href="task2.html">View Computer Lab Timetable</a>
+    <section class="hero">
+        <div class="tag">HTML & CSS PROJECT</div>
+
+        <h1>Learning Through<br><span>Web Development.</span></h1>
+
+        <p>
+            Welcome to my HTML assignment portal.
+            Explore my practical work, including student marksheets
+            and computer laboratory timetables.
+        </p>
+    </section>
+
+    <main class="container" id="assignments">
+
+        <div class="section-heading">
+            <h2>My Assignments</h2>
+            <p>Explore the completed HTML practical tasks.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+
+                <small>ASSIGNMENT 01</small>
+
+                <h3>Student Marksheet</h3>
+
+                <p>
+                    A student marksheet created using HTML tables
+                    to organize subjects, marks and academic results.
+                </p>
+
+                <a href="task1.html">View Assignment →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📅</div>
+
+                <small>ASSIGNMENT 02</small>
+
+                <h3>Computer Lab Timetable</h3>
+
+                <p>
+                    A weekly computer laboratory timetable designed
+                    using HTML table elements and structured rows.
+                </p>
+
+                <a href="task2.html">View Assignment →</a>
+            </div>
+
+        </div>
+
+        <section class="about" id="about">
+            <h2>About This Project</h2>
+
+            <p>
+                This project demonstrates my understanding of HTML
+                table elements, rows, columns, headings and basic
+                web page styling using CSS. It is part of my
+                practical learning journey in web development.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 HTML Assignment Project | Created by Reeyaz
+    </footer>
 
 </body>
 </html>
