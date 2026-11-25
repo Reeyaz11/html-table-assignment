@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Computer Lab Timetable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Computer Lab Timetable</h1>
+        <p class="subtitle">Monday to Friday - HTML and CSS table practice - Task 2</p>
+
+        <table class="timetable">
+            <caption>Weekly computer lab timetable</caption>
+
+            <colgroup>
+                <col class="day-column">
+                <col span="2" class="morning-column">
+                <col class="break-column">
+                <col span="2" class="afternoon-column">
+                <col class="room-column">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th rowspan="2">Day</th>
+                    <th colspan="2">Morning sessions</th>
+                    <th rowspan="2">Break<br><small>11:00-11:30</small></th>
+                    <th colspan="2">Afternoon sessions</th>
+                    <th rowspan="2">Room</th>
+                </tr>
+                <tr>
+                    <th>9:00-10:00</th>
+                    <th>10:00-11:00</th>
+                    <th>11:30-12:30</th>
+                    <th>12:30-1:30</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Monday</th>
+                    <td colspan="2">HTML Lab</td>
+                    <td rowspan="5">Break</td>
+                    <td>CSS</td>
+                    <td>Practice</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                    <td colspan="2">Web Project</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td colspan="2">Table Workshop</td>
+                    <td>Review</td>
+                    <td>Quiz</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>JavaScript</td>
+                    <td>Practice</td>
+                    <td colspan="2">Group Project</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td>Revision</td>
+                    <td>Test</td>
+                    <td>Presentation</td>
+                    <td>Feedback</td>
+                    <td>101</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="note">7 columns | 2 header rows | 5 day rows | Time runs from 9:00 a.m. to 1:30 p.m.</p>
+    </div>
+</body>
+</html>

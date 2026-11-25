@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #5301f7;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 28px;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #7a05ff;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #fe06cc;
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 0;
+    color: #015bf7;
+}
+
+th, td {
+    border: 1px solid #cce5ff;
+    padding: 13px 12px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+tfoot td {
+    font-weight: bold;
+    text-align: left;
+}
+
+tfoot td:last-child {
+    text-align: center;
+}
+
+/* Marksheet column colours */
+.marksheet .student-column {
+    background-color: #e9edf2;
+}
+
+.marksheet .subject-column {
+    background-color: #e5efff;
+}
+
+.marksheet .total-column {
+    background-color: #e4f3e9;
+}
+
+/* Timetable column colours */
+.timetable .day-column,
+.timetable .room-column {
+    background-color: #e9edf2;
+}
+
+.timetable .morning-column {
+    background-color: #e5efff;
+}
+
+.timetable .break-column {
+    background-color: #fff1c9;
+}
+
+.timetable .afternoon-column {
+    background-color: #e4f3e9;
+}
+
+.note {
+    margin-top: 18px;
+    color: #667384;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 14px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 620px;
+    }
+}
